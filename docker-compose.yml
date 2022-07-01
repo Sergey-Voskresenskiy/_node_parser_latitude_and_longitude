@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mysql:
+    environment:
+      - MYSQL_ROOT_PASSWORD=demo1234
+      - MYSQL_DATABASE=database
+    ports:
+      - '3362:3306'
+    volumes:
+      - './db:/var/lib/mysql'
+    image: 'mysql:latest'
+    user: 0:0

@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Coordinate {
+  id        Int    @id @default(autoincrement())
+  latitude  String
+  longitude String
+  name      String
+}
